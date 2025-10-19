@@ -8,7 +8,8 @@ The project's workflow is defined in an Airflow DAG. This DAG orchestrates the f
 
 1.  **Data Preprocessing:** Cleans and prepares the data for model training. This includes handling missing values, encoding categorical features, and scaling numerical features.
 2.  **Model Training:** Trains a machine learning model to predict survival.
-3.  **Model Evaluation:** Evaluates the model's performance on a test set. A branching operator has also been setup to evaluate if the end was success or failure based on the accuracy.
+3.  **Model Evaluation:** Evaluates the model's performance on a test set. 
+4.  **Accuracy Branch:** A branching operator has also been setup to evaluate if the end was success or failure based on the accuracy.
 
 -----
 
