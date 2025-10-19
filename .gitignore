@@ -3,3 +3,4 @@ config/logs/
 .DS_Store
 dags/__pycache__/
 dags/src/__pycache__/
+config/simple_auth_manager_passwords.json.generated
