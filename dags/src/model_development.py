@@ -24,11 +24,6 @@ def preprocess_data():
     df['Sex'] = df['Sex'].map({'male': 0, 'female': 1})
     df = pd.get_dummies(df, columns=['Embarked'], drop_first=True)
     df = df.astype(float)
-        
-    print("Data after preprocessing:")
-    print(df.head())
-    print("\nMissing values check:")
-    print(df.isnull().sum())
 
     df.to_csv(path.join(get_base_dir(), "data", "preprocessed_titanic_data.csv"), index=False)
 
@@ -57,3 +52,4 @@ def evaluate_model():
     y_test = data['y_test']
     accuracy = model.score(X_test, y_test)
     print(f'Model Accuracy: {accuracy * 100:.2f}%')
+    return accuracy

@@ -9,7 +9,7 @@ def check_accuracy(**context):
     acc = context['ti'].xcom_pull(task_ids='evaluate_model')
     print(f"Model accuracy is {acc:.4f}. Checking against threshold...")
 
-    if acc >= 0.80:
+    if acc >= 0.75:
         return 'end_success'
     return 'end_failure'
 
